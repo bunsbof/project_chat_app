@@ -1,8 +1,11 @@
 import React from 'react'
+import Forms from '../components/Forms'
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <div>
+      <Forms />
+    </div>
   )
 }
 
