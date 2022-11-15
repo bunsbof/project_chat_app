@@ -145,6 +145,7 @@ const Register = () => {
           type="file"
           appcept="image/*"
           onChange={(e) => postDetails(e.target.files[0])}
+          className="bg-[#eee] border-none py-[12px] px-[15px] my-[8px] mx-0 w-[100%]"
         />
         <label htmlFor="file" className="forfile">
           Choose a Photo
@@ -154,26 +155,34 @@ const Register = () => {
           type="text"
           placeholder="Name"
           onChange={(e) => setUsername(e.target.value)}
+          className="bg-[#eee] border-none py-[12px] px-[15px] my-[8px] mx-0 w-[100%]"
+
         />
         <input
           value={email}
           type="email"
           placeholder="Email"
           onChange={(e) => setEmail(e.target.value)}
+          className="bg-[#eee] border-none py-[12px] px-[15px] my-[8px] mx-0 w-[100%]"
+
         />
         <input
           value={password}
           type="password"
           placeholder="Password"
           onChange={(e) => setPassword(e.target.value)}
+          className="bg-[#eee] border-none py-[12px] px-[15px] my-[8px] mx-0 w-[100%]"
+
         />
         <input
           value={confirmPassword}
           type="password"
           placeholder="Confirm Password"
           onChange={(e) => setConfirmPassword(e.target.value)}
+          className="bg-[#eee] border-none py-[12px] px-[15px] my-[8px] mx-0 w-[100%]"
+
         />
-        <button type="submit">Sign Up</button>
+        <button type="submit" className="rounded-[20px] border-solid border-2 border-[#ff4b2b] bg-[#ff4b2b] text-[#ffffff] text-12 font-bold py-[12px] px-[45px] tracking-[1px] uppercase ease-in duration-300 active:scale-[0.95]">Sign Up</button>
       </form>
     </>
   );

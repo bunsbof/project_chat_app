@@ -85,15 +85,19 @@ const Login = () => {
           type="email"
           placeholder="Email"
           onChange={(e) => setEmail(e.target.value)}
+          className="bg-[#eee] border-none py-[12px] px-[15px] my-[8px] mx-0 w-[100%]"
+
         />
         <input
           value={password}
           type="password"
           placeholder="Password"
           onChange={(e) => setPassword(e.target.value)}
+          className="bg-[#eee] border-none py-[12px] px-[15px] my-[8px] mx-0 w-[100%]"
+
         />
         <a>Forgot your password?</a>
-        <button type="submit">Sign In</button>
+        <button type="submit" className="rounded-[20px] border-solid border-2 border-[#ff4b2b] bg-[#ff4b2b] text-[#ffffff] text-12 font-bold py-[12px] px-[45px] tracking-[1px] uppercase ease-in duration-300 active:scale-[0.95]">Sign In</button>
       </form>
     </>
   );

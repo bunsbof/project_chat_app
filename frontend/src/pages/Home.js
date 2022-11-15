@@ -10,9 +10,9 @@ const Home = () => {
     if(user) navigate("/chats")
   }, [navigate])
   return (
-    <div>
+    <>
       <Forms />
-    </div>
+    </>
   )
 }
 
