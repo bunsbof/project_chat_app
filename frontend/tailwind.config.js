@@ -7,18 +7,26 @@ module.exports = {
       body: ['Open Sans', 'sans-serif'],
     },
     extend: {
+      borderRadius: {
+        'loginBtn': '20px',
+        'circle': '50%'
+      },
       fontSize: {
         // 14: '14px',
         12: '12px'
       },
       backgroundColor: {
-        'body-bg': '#f6f5f7',
+        'main-dark-bg': '#20232A',
+        'loginBtn': '#ff4b2b',
       },
       borderWidth: {
         1: '1px',
       },
       borderColor: {
-        color: 'rgba(0, 0, 0, 0.1)',
+        'btnBorder': '#ff4b2b',
+        'ghost': '#ffffff',
+        'mainTheme': '#eee',
+        'socialBtn': '#dddddd'
       },
       width: {
         // 400: '400px',
