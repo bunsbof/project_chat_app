@@ -27,7 +27,7 @@ const Forms = () => {
                 To keep connected with us please login with your personal info
               </p>
               <button
-                className="rounded-loginBtn border-1 border-solid border-ghost bg-transparent text-white text-xs font-bold py-3 px-11 tracking-[1px] uppercase active:scale-95 focus:outline-none "
+                className="rounded-loginBtn border-1 border-solid border-ghost bg-transparent text-white text-xs font-bold py-3 px-11 tracking-[1px] uppercase active:scale-95 focus:outline-none"
                 id="signIn"
                 onClick={() => setForm((prev) => !prev)}
               >
@@ -40,7 +40,7 @@ const Forms = () => {
                 Enter your personal details and start journey with us
               </p>
               <button
-                className="rounded-loginBtn border-1 border-solid border-ghost bg-transparent text-white text-xs font-bold py-3 px-11 tracking-[1px] uppercase active:scale-95 focus:outline-none "
+                className="rounded-loginBtn border-1 border-solid border-ghost bg-transparent text-white text-xs font-bold py-3 px-11 tracking-[1px] uppercase active:scale-95 focus:outline-none"
                 id="signUp"
                 onClick={() => setForm((prev) => !prev)}
               >
