@@ -1,10 +1,13 @@
-import React from "react";
-import test from '../dummy-users/user.jpg'
+import React, { useState } from "react";
+import test from "../dummy-users/user.jpg";
 import { BsChatLeftDots } from "react-icons/bs";
+import { BsThreeDotsVertical } from "react-icons/bs";
 import ActiveConversations from "./ActiveConversations";
 import Archived from "./Archived";
 
 const Sidebar = () => {
+  const [dropdown, setDropdown] = useState(true);
+
   return (
     <>
       <div className="flex flex-col py-8 pl-6 pr-2 w-64 bg-white flex-shrink-0">
@@ -14,13 +17,30 @@ const Sidebar = () => {
           </div>
           <div className="ml-2 font-bold text-2xl">Talky Talky</div>
         </div>
-        <div className="flex flex-col items-center bg-indigo-100 border border-gray-200 mt-4 w-full py-6 px-4 rounded-lg">
+        <div className="relative flex flex-col items-center bg-indigo-100 border border-gray-200 mt-4 w-full py-6 px-4 rounded-lg">
+          <button
+            className="absolute right-1 top-1 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-1.5"
+            type="button"
+            onClick={() => setDropdown(prev => !prev)}
+          >
+            <span className="sr-only">Open dropdown</span>
+            <BsThreeDotsVertical className="text-2xl"/>
+          </button>
+          <div className={`z-10 ${dropdown ? 'hidden' : ''} absolute right-1 text-base list-none bg-white divide-y divide-gray-100 rounded shadow w-44 dark:bg-gray-700`}>
+            <ul className="py-1" aria-labelledby="dropdownButton">
+            <li>
+                <p className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Profile</p>
+            </li>
+            <li>
+                <p className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Test</p>
+            </li>
+            <li>
+                <p className="block px-4 py-2 text-sm text-red-600 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Logout</p>
+            </li>
+            </ul>
+        </div>
           <div className="h-20 w-20 rounded-full border overflow-hidden">
-            <img
-              src={test}
-              alt="Avatar"
-              className="h-full w-full"
-            />
+            <img src={test} alt="Avatar" className="h-full w-full" />
           </div>
           <div className="text-sm font-semibold mt-2">Bunsbof.</div>
           <div className="text-xs text-gray-500">Playing your mom</div>
