@@ -11,10 +11,10 @@ const Chat = () => {
     <div className="h-screen overflow-hidden flex items-center justify-center">
       <div className="flex h-screen antialiased text-gray-800 w-full">
         <div className="flex flex-row h-full w-full overflow-x-hidden">
-          <Sidebar />
+          {user && <Sidebar />}
           <div className="flex flex-col flex-auto h-full p-6 w-full">
             {/* <NavBar /> */}
-            <ChatBox />
+            {user &&  <ChatBox />}
           </div>
         </div>
       </div>

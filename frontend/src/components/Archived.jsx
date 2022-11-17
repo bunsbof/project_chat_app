@@ -1,6 +1,8 @@
 import React from "react";
+import { ChatState } from "../Context/ChatProvider";
 
 const Archived = () => {
+  const {selectedChat, user, chats, setChats} = ChatState
   return (
     <>
       <div className="flex flex-row items-center justify-between text-xs mt-6">
