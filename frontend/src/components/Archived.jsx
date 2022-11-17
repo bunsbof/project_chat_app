@@ -1,8 +1,10 @@
 import React from "react";
 import { ChatState } from "../Context/ChatProvider";
+import { useToast } from "@chakra-ui/react";
 
 const Archived = () => {
-  const {selectedChat, user, chats, setChats} = ChatState
+  const [loggedUser, setLoggedUser] = useState()
+  const {selectedChat, user, chats, setChats} = ChatState()
   return (
     <>
       <div className="flex flex-row items-center justify-between text-xs mt-6">
