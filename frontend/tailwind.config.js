@@ -7,6 +7,9 @@ module.exports = {
       body: ['Open Sans', 'sans-serif'],
     },
     extend: {
+      animation: {
+        'spin-slow': 'spin 3s linear infinite',
+      },
       borderRadius: {
         'loginBtn': '20px',
         'circle': '50%'

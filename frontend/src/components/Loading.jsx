@@ -2,46 +2,20 @@ import React from "react";
 
 const Loading = () => {
   return (
-    <div
-      role="status"
-      className="p-4 space-y-4 max-w-md rounded border border-gray-200 divide-y divide-gray-200 shadow animate-pulse dark:divide-gray-700 md:p-6 dark:border-gray-700"
-    >
-      <div className="flex justify-between items-center">
-        <div>
-          <div className="h-2.5 bg-gray-300 rounded-full dark:bg-gray-600 w-24 mb-2.5"></div>
-          <div className="w-32 h-2 bg-gray-200 rounded-full dark:bg-gray-700"></div>
+    <div className="border border-blue-300 shadow rounded-md p-4 max-w-sm w-full mx-auto">
+      <div className="animate-pulse flex space-x-4">
+        <div className="rounded-full bg-slate-700 h-10 w-10"></div>
+        <div className="flex-1 space-y-6 py-1">
+          <div className="h-2 bg-slate-700 rounded"></div>
+          <div className="space-y-3">
+            <div className="grid grid-cols-3 gap-4">
+              <div className="h-2 bg-slate-700 rounded col-span-2"></div>
+              <div className="h-2 bg-slate-700 rounded col-span-1"></div>
+            </div>
+            <div className="h-2 bg-slate-700 rounded"></div>
+          </div>
         </div>
-        <div className="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
       </div>
-      <div className="flex justify-between items-center pt-4">
-        <div>
-          <div className="h-2.5 bg-gray-300 rounded-full dark:bg-gray-600 w-24 mb-2.5"></div>
-          <div className="w-32 h-2 bg-gray-200 rounded-full dark:bg-gray-700"></div>
-        </div>
-        <div className="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
-      </div>
-      <div className="flex justify-between items-center pt-4">
-        <div>
-          <div className="h-2.5 bg-gray-300 rounded-full dark:bg-gray-600 w-24 mb-2.5"></div>
-          <div className="w-32 h-2 bg-gray-200 rounded-full dark:bg-gray-700"></div>
-        </div>
-        <div className="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
-      </div>
-      <div className="flex justify-between items-center pt-4">
-        <div>
-          <div className="h-2.5 bg-gray-300 rounded-full dark:bg-gray-600 w-24 mb-2.5"></div>
-          <div className="w-32 h-2 bg-gray-200 rounded-full dark:bg-gray-700"></div>
-        </div>
-        <div className="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
-      </div>
-      <div className="flex justify-between items-center pt-4">
-        <div>
-          <div className="h-2.5 bg-gray-300 rounded-full dark:bg-gray-600 w-24 mb-2.5"></div>
-          <div className="w-32 h-2 bg-gray-200 rounded-full dark:bg-gray-700"></div>
-        </div>
-        <div className="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
-      </div>
-      <span className="sr-only">Loading...</span>
     </div>
   );
 };
