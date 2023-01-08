@@ -1,15 +1,31 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Sidebar from "./components/Sidebar";
 import "./App.css";
-import { Home, Chat } from "./pages";
-import { Route, Routes } from "react-router-dom";
+import Chat from "./pages/Chat";
+import ChatContent from "./components/Chat/ChatContent";
+import { ContextProvider } from "./context/ContextProvider";
+import SharedFiles from "./components/Chat/SharedFiles";
 
 function App() {
   return (
-    <div className="App">
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/chats" element={<Chat />} />
-      </Routes>
-    </div>
+    <BrowserRouter>
+      <ContextProvider>
+        <div className="flex flex-row">
+          <div className="w-20 bg-white">
+            <Sidebar />
+          </div>
+          <Routes>
+            <Route path="/message" element={<Chat />}>
+              <Route path=":conversationId" element={() => (<>
+                <ChatContent />
+                <SharedFiles />
+              </>)} />
+            </Route>
+          </Routes>
+        </div>
+      </ContextProvider>
+    </BrowserRouter>
   );
 }
 

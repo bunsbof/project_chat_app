@@ -1,15 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";
 import "./index.css";
 import App from "./App";
-import ChatProvider from "./Context/ChatProvider";
+import { ContextProvider } from "./context/ContextProvider";
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <BrowserRouter>
-    <ChatProvider>
-      <App />
-    </ChatProvider>
-  </BrowserRouter>
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <ContextProvider>
+    <App />
+  </ContextProvider>
 );

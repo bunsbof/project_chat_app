@@ -1,23 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap');
-
-.sidebar {
-  box-shadow: rgb(113 122 131 / 11%) 0px 7px 30px 0px;
+.navButton::before {
+  content: "";
+  position: absolute;
+  left: 77px;
+  width: 5px;
+  background-color: #00a186;
+  height: 5%;
+  border-radius: 20px;
 }
 
-@media  screen and (max-width:800px) {
-  .sidebar{
-    z-index: 10000000;
-  }
+.navChat::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: #d4d7da;
+  height: 1px;
+  top: 124px;
 }
 
-.scrollbar-width::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 0.25rem;
   height: 0.25rem;
 }
 
-.scrollbar-thumb-color::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
   --bg-opacity: 1;
-  background-color: #edf2f7;
+  background-color: black;
   background-color: rgba(237, 242, 247, var(--bg-opacity));
   border-radius: 2.35rem;
 }
